@@ -1,0 +1,23 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import BlogLatestPosts from "~/components/widgets/BlogLatestPosts.astro";
+import Content from "~/components/widgets/Content.astro";
+import Brands from "~/components/widgets/Brands.astro";
+
+const metadata = {
+  title: "Transcension AI",
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <Hero id="hero" title="Transcension AI">
+    <Fragment slot="subtitle">
+      Building the future of AI and tech. <br />
+    </Fragment>
+  </Hero>
+
+  <!-- Blog -->
+  <BlogLatestPosts id="blog" title="Latest Posts" />
+</Layout>
