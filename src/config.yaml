@@ -1,30 +1,31 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Transcension AI
+  site: 'https://www.transcension.ai'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  # TODO: Update these values
+  # googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Transcension AI
+    template: '%s — Transcension AI'
+  description: "Transcension AI is a software company that specializes in AI and machine learning solutions for SMEs."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Transcension AI
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/opengraph.jpg'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@EngNadeau'
+    site: '@EngNadeau'
     cardType: summary_large_image
 
 i18n:
@@ -69,4 +70,4 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'light:only' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
