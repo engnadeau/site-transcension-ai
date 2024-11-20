@@ -3,19 +3,17 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     { text: 'Home', href: getPermalink('/') },
-    { text: 'Services', href: getPermalink('/#services') },
-    { text: 'Our Vision', href: getPermalink('/#vision') },
-    { text: 'Pricing', href: getPermalink('/#pricing') },
+    { text: 'Solutions', href: getPermalink('/#solutions') },
     { text: 'FAQs', href: getPermalink('/#faqs') },
-    { text: 'Contact', href: getPermalink('/#contact') },
+    { text: 'Contact', href: getPermalink('/contact') },
   ],
-  actions: [{ text: 'Get Started', href: getPermalink('/#services') }],
+  actions: [{ text: 'Get Started', href: getPermalink('/#solutions') }],
 };
 
 export const footerData = {
   links: [
     { title: 'Company', links: [{ text: 'About Us', href: getPermalink('/#vision') }] },
-    { title: 'Support', links: [{ text: 'Contact', href: getPermalink('/#contact') }] },
+    { title: 'Support', links: [{ text: 'Contact', href: getPermalink('/contact') }] },
   ],
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
