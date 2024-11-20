@@ -3,9 +3,10 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     { text: 'Home', href: getPermalink('/') },
-    { text: 'Platform', href: '#platform' },
-    { text: 'Use Cases', href: '#use-case-robotics' },
-    { text: 'Impact', href: '#how-we-drive-impact' },
+    { text: 'About', href: getPermalink('/about') },
+    { text: 'Platform', href: '/#platform' },
+    { text: 'Use Cases', href: '/#use-case-robotics' },
+    { text: 'Impact', href: '/#how-we-drive-impact' },
     { text: 'Contact', href: getPermalink('/contact') },
   ],
 };
