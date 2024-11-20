@@ -10,9 +10,12 @@ import Pricing from '~/components/widgets/Pricing.astro';
 import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Transcension AI - Elevate Your Business with AI',
+  title: 'Transcension AI - Scalable AI for Real-World Impact',
 };
 ---
 
@@ -22,8 +25,8 @@ const metadata = {
     <Header
       {...headerData}
       actions={[
-        { variant: 'secondary', text: 'Contact Us', href: '#contact' },
-        { variant: 'primary', text: 'Get Started', href: '#services' },
+        { variant: 'secondary', text: 'Contact Us', href: '/contact' },
+        { variant: 'primary', text: 'Get Started', href: '#platform' },
       ]}
       isSticky
     />
@@ -31,168 +34,151 @@ const metadata = {
 
   <!-- Hero Section -->
   <Hero2
-    tagline="Transcend to the Future with AI"
+    tagline="Unlock Scalable Growth with AI"
     actions={[
-      { variant: 'primary', text: 'Explore Services', href: '#services' },
-      { text: 'Learn More', href: '#vision' },
+      { variant: 'primary', text: 'Discover Our Platform', href: '#platform' },
+      { text: 'Learn More', href: '#mission' },
     ]}
     image={{
       src: '~/assets/images/hero.jpg',
-      alt: 'Astronaut Symbolizing Transcension AI',
+      alt: 'Transcension AI - Scalable AI Solutions',
     }}
   >
     <Fragment slot="title">
-      Empowering Businesses to <span class="text-accent">Transcend</span> with AI
+      Empowering <span class="text-accent">Real-World Growth</span> with Scalable AI
     </Fragment>
     <Fragment slot="subtitle">
-      Guiding companies into the AI age with expert consulting, transformative solutions, and a future-ready platform.
+      Transcension AI combines practical insights with modular platforms to deliver AI solutions that transform
+      operations, enable innovation, and drive measurable impact.
     </Fragment>
   </Hero2>
 
   <!-- Features Section -->
   <Features
-    id="services"
-    title="Our Expertise"
-    subtitle="Tailored AI solutions to propel your business into the future."
+    id="platform"
+    title="Our Scalable AI Platform"
+    subtitle="Built for flexibility, designed for impact."
     columns={2}
     items={[
       {
-        title: 'AI Consulting',
-        description: 'Custom AI strategies that align with your business goals, unlocking new efficiencies and growth.',
-        icon: 'tabler:brain',
+        title: 'Modular Tools',
+        description: 'Customizable platforms that address operational challenges and scale across industries.',
+        icon: 'tabler:tool',
       },
       {
-        title: 'Scalable AI Solutions',
-        description: 'Future-ready solutions for seamless AI adoption within small and medium enterprises.',
-        icon: 'tabler:trending-up',
+        title: '80/20 Solutions',
+        description: 'Delivering practical, enterprise-grade functionality at a fraction of the cost.',
+
+        icon: 'tabler:scale',
       },
       {
-        title: 'Platform in Development',
-        description: 'Creating tools to streamline AI deployment and elevate business operations.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Innovation & Strategy',
-        description: 'Guidance to transcend traditional tech limitations with cutting-edge innovation.',
+        title: 'Insights into Innovation',
+        description: 'Turning real-world challenges into redeployable tools for rapid growth.',
         icon: 'tabler:bulb',
+      },
+      {
+        title: 'Private Equity-Ready',
+        description: 'Designed to enable portfolio-wide transformation and operational efficiency.',
+        icon: 'tabler:building-skyscraper',
       },
     ]}
   />
 
-  <!-- Vision Section -->
+  <!-- Use Cases -->
   <Content
-    title="Our Vision"
-    subtitle="Building the AI Platform of Tomorrow"
+    title="Use Cases"
+    subtitle="Explore how Transcension AI leverages cutting-edge technology to solve critical business challenges."
     isReversed
     items={[
       {
-        title: 'Future-Driven AI',
-        description:
-          'Our mission is to empower companies with the tools to seamlessly integrate AI. We envision a platform that simplifies AI deployment, giving small to medium enterprises a competitive edge in the digital era.',
+        description: `Leverage mobile robots and computer vision to bring Industry 4.0 to life. Gain real-time intelligence on your assets, enable predictive maintenance, and streamline inspections for smarter industrial operations.`,
       },
     ]}
     image={{
-      src: '~/assets/images/hero.jpg',
-      alt: 'Future AI Platform Concept',
+      src: 'https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
+      alt: 'Robotics, Computer Vision, and AI in Industry 4.0',
     }}
-  />
-
-  <!-- Pricing Section -->
-  <Pricing
-    title="Flexible Consulting Packages"
-    prices={[
-      {
-        title: 'Starter',
-        subtitle: 'Basic AI strategy sessions',
-        price: '500',
-        period: 'per session',
-        callToAction: {
-          text: 'Get Started',
-          href: '#contact',
-        },
-      },
-      {
-        title: 'Advanced',
-        subtitle: 'In-depth AI implementation plans',
-        price: '1500',
-        period: 'per month',
-        hasRibbon: true,
-        ribbonTitle: 'Popular',
-        callToAction: {
-          text: 'Contact Us',
-          href: '#contact',
-        },
-      },
-      {
-        title: 'Enterprise',
-        subtitle: 'Comprehensive, ongoing consulting',
-        price: '5000',
-        period: 'per month',
-        callToAction: {
-          text: 'Request a Quote',
-          href: '#contact',
-        },
-      },
-    ]}
-  />
-
-  <!-- FAQs Section -->
-  <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        title: 'How can AI help my business?',
-        description:
-          'AI can streamline operations, enhance customer experiences, and provide valuable insights for growth.',
-      },
-      {
-        title: 'What industries do you specialize in?',
-        description:
-          'We work with a wide range of industries, particularly SMBs and startups looking to adopt AI-driven solutions.',
-      },
-      {
-        title: 'What does the consulting process involve?',
-        description:
-          'Our consulting process includes strategy sessions, implementation plans, and support for AI adoption.',
-      },
-    ]}
-  />
-
-  <!-- BlogLatestPost Widget **************** -->
-
-  <BlogLatestPosts
-    id="blog"
-    title="Stay informed with AstroWind's blog"
-    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Robotics, Computer Vision, and Industry 4.0
+      </h3>
     </Fragment>
-  </BlogLatestPosts>
+  </Content>
 
-  <!-- Contact Section -->
-  <Steps2
-    title="Get in Touch"
-    subtitle="Ready to take your business to the next level? Contact us today."
-    callToAction={{
-      text: 'Contact Us',
-      href: '#contact',
-    }}
+  <Content
+    isAfterContent={true}
     items={[
       {
-        title: 'Email',
-        description: 'info@transcension.ai',
-        icon: 'tabler:mail',
+        description: `Transform operations with AI-powered insights from time series data. Enable predictive inventory, maintenance, and resource planning to supercharge analysts and operators with smarter, faster decision-making.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
+      alt: 'Operational Intelligence and Forecasting',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Operational Intelligence and Forecasting
+      </h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        description: `Unlock insights from unstructured data with cutting-edge AI. Streamline workflows like RFP generation, allowing AI to handle the grunt work so humans can focus on creativity and high-impact tasks.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1526401281623-40fae4cc22e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
+      alt: 'Generative AI for Business Insights',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Large Language Models and Generative AI
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Section -->
+  <Features2
+    title="How We Drive Impact"
+    subtitle="Our approach combines actionable insights and scalable solutions to deliver real-world results."
+    items={[
+      {
+        title: 'Understanding Challenges',
+        description:
+          'We identify key transformation opportunities by analyzing your business’s unique needs and challenges.',
+        icon: 'tabler:search',
       },
       {
-        title: 'Phone',
-        description: '+1 (555) 123-4567',
-        icon: 'tabler:phone',
+        title: 'Building Scalable Solutions',
+        description: 'Our modular platforms provide flexible, impactful tools tailored to your operational goals.',
+        icon: 'tabler:settings',
       },
       {
-        title: 'LinkedIn',
-        description: 'Follow Us',
-        icon: 'tabler:brand-linkedin',
+        title: 'Driving Long-Term Growth',
+        description:
+          'We deliver solutions that enable sustained innovation, operational excellence, and future readiness.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <!-- Call To Action -->
+  <CallToAction
+    title="Ready to Scale Your Business with AI?"
+    subtitle="Join the growing number of businesses transforming with Transcension AI."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: '/contact',
       },
     ]}
   />
