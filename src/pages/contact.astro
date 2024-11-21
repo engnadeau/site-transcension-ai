@@ -8,17 +8,71 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
+  <!-- HeroText Widget -->
   <HeroText tagline="Contact" title="Let's Connect!" />
 
   <!-- Form Container -->
   <div class="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-lg border mb-16">
-    <script is:inline charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <div id="hs-form-container"></div>
+
     <script is:inline>
-      hbspt.forms.create({
-        portalId: '48173210',
-        formId: '6cc6def1-a379-4155-afd6-829bdaa9aa9d',
+      /**
+       * Dynamically loads the HubSpot form script into the page.
+       * If the script already exists, it removes it to avoid duplicate instances.
+       * @param {Function} callback - The function to call after the script loads successfully.
+       */
+      function loadHubSpotScript(callback) {
+        // Check if the HubSpot script already exists in the document
+        const existingScript = document.querySelector('script[src="//js.hsforms.net/forms/embed/v2.js"]');
+        if (existingScript) {
+          existingScript.remove(); // Remove the existing script to allow a fresh reload
+        }
+
+        // Create a new script element
+        const script = document.createElement('script');
+        script.src = '//js.hsforms.net/forms/embed/v2.js'; // HubSpot script source
+        script.type = 'text/javascript';
+        script.async = true; // Load asynchronously to avoid blocking the page
+
+        // Call the provided callback function once the script has loaded
+        script.onload = callback;
+
+        // Append the script to the document's body
+        document.body.appendChild(script);
+      }
+
+      /**
+       * Initializes the HubSpot form inside the specified container.
+       * Checks if the HubSpot library is ready before creating the form.
+       */
+      function initializeHubSpotForm() {
+        // Check if the HubSpot library is loaded and the form creation method is available
+        if (window.hbspt && typeof hbspt.forms.create === 'function') {
+          hbspt.forms.create({
+            portalId: '48173210', // Your HubSpot portal ID
+            formId: '6cc6def1-a379-4155-afd6-829bdaa9aa9d', // Your HubSpot form ID
+            target: '#hs-form-container', // The container where the form will be rendered
+          });
+        } else {
+          // If the library is not ready, log a warning and retry by reloading the script
+          console.warn('HubSpot form script not ready. Retrying...');
+          loadHubSpotScript(() => initializeHubSpotForm()); // Retry initialization after reloading the script
+        }
+      }
+
+      /**
+       * Event listener to handle SPA transitions in Astro.
+       * Ensures the HubSpot script is reloaded when the page content changes dynamically.
+       */
+      document.addEventListener('astro:after-swap', () => {
+        loadHubSpotScript(() => initializeHubSpotForm());
+      });
+
+      /**
+       * Event listener to initialize the HubSpot form on the initial page load.
+       */
+      document.addEventListener('DOMContentLoaded', () => {
+        loadHubSpotScript(() => initializeHubSpotForm());
       });
     </script>
   </div>
