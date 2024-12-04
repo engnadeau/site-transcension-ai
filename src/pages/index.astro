@@ -10,7 +10,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Transcension AI - Scalable AI for Real-World Impact',
+  title: 'Transcension AI - Data-Driven AI Insights for Intelligent Systems',
 };
 ---
 
@@ -30,51 +30,51 @@ const metadata = {
   <!-- Hero Section -->
   <Hero2
     id="hero"
-    tagline="Unlock Scalable Growth with AI"
+    tagline="Unlock the Power of Operational Data"
     actions={[
-      { variant: 'primary', text: 'Discover Our Platform', href: '#platform' },
+      { variant: 'primary', text: 'Discover Our Solutions', href: '#platform' },
       { text: 'Learn More', href: '#how-we-drive-impact' },
     ]}
     image={{
       src: '~/assets/images/hero.jpg',
-      alt: 'Transcension AI - Scalable AI Solutions',
+      alt: 'Transcension AI - Data-Driven Insights',
     }}
   >
     <Fragment slot="title">
-      Empowering <span class="text-accent">Real-World Growth</span> with Scalable AI
+      Transforming <span class="text-accent">Intelligent Systems</span> with Data
     </Fragment>
     <Fragment slot="subtitle">
-      Transcension AI combines practical insights with modular platforms to deliver AI solutions that transform
-      operations, enable innovation, and drive measurable impact.
+      Transcension AI enables industries to harness the vast potential of operational data through AI-driven insights,
+      empowering organizations to make smarter decisions and achieve unparalleled efficiency.
     </Fragment>
   </Hero2>
 
   <!-- Features Section -->
   <Features
     id="platform"
-    title="Our Scalable AI Platform"
-    subtitle="Built for flexibility, designed for impact."
+    title="Our AI-Driven Solutions"
+    subtitle="Innovating at the intersection of data, intelligence, and action."
     columns={2}
     items={[
       {
-        title: 'Modular Tools',
-        description: 'Customizable platforms that address operational challenges and scale across industries.',
-        icon: 'tabler:tool',
+        title: 'Data Transformation',
+        description: 'Ingest, transform, and make sense of sensor and operational data at scale.',
+        icon: 'tabler:database',
       },
       {
-        title: '80/20 Solutions',
-        description: 'Delivering practical, enterprise-grade functionality at a fraction of the cost.',
-        icon: 'tabler:scale',
+        title: 'Computer Vision Models',
+        description: 'Deploy powerful vision systems for real-time detection, tracking, and analysis.',
+        icon: 'tabler:camera',
       },
       {
-        title: 'Insights into Innovation',
-        description: 'Turning real-world challenges into redeployable tools for rapid growth.',
-        icon: 'tabler:bulb',
+        title: 'Operational Insights',
+        description: 'Convert raw data into actionable intelligence for smarter decision-making.',
+        icon: 'tabler:chart-line',
       },
       {
-        title: 'Private Equity-Ready',
-        description: 'Designed to enable portfolio-wide transformation and operational efficiency.',
-        icon: 'tabler:building-skyscraper',
+        title: 'Edge-Optimized AI',
+        description: 'Embedded solutions tailored for robotics, drones, and industrial systems.',
+        icon: 'tabler:cpu',
       },
     ]}
   />
@@ -83,63 +83,59 @@ const metadata = {
   <Content
     id="use-case-robotics"
     title="Use Cases"
-    subtitle="Explore how Transcension AI leverages cutting-edge technology to solve critical business challenges."
+    subtitle="Unlock the full potential of robotics, drones, and intelligent systems."
     isReversed
     items={[
       {
-        description: `Leverage mobile robots and computer vision to bring Industry 4.0 to life. Gain real-time intelligence on your assets, enable predictive maintenance, and streamline inspections for smarter industrial operations.`,
+        description: `Revolutionize Industry 4.0 with AI-powered robotics and drones. Enable predictive maintenance, automate inspections, and enhance safety with real-time operational insights.`,
       },
     ]}
     image={{
       src: '~/assets/images/robotics.jpg',
-      alt: 'Robotics, Computer Vision, and AI in Industry 4.0',
+      alt: 'Robotics and AI in Industry 4.0',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Robotics, Computer Vision, and Industry 4.0
+        Robotics, Drones, and Industry 4.0
       </h3>
     </Fragment>
   </Content>
 
   <Content
-    id="use-case-operations"
+    id="use-case-security"
     isAfterContent={true}
     items={[
       {
-        description: `Transform operations with AI-powered insights from time series data. Enable predictive inventory, maintenance, and resource planning to supercharge analysts and operators with smarter, faster decision-making.`,
+        description: `Enhance security and defense with AI-driven surveillance and threat detection. From border monitoring to critical infrastructure protection, our solutions deliver unmatched precision and scalability.`,
       },
     ]}
     image={{
-      src: '~/assets/images/operations.jpg',
-      alt: 'Operational Intelligence and Forecasting',
+      src: '~/assets/images/security.jpg',
+      alt: 'AI for Security and Defense',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Operational Intelligence and Forecasting
-      </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Security and Defense</h3>
     </Fragment>
   </Content>
 
   <Content
-    id="use-case-llm"
+    id="use-case-agtech"
     isReversed
     isAfterContent={true}
     items={[
       {
-        description: `Unlock insights from unstructured data with cutting-edge AI. Streamline workflows like RFP generation, allowing AI to handle the grunt work so humans can focus on creativity and high-impact tasks.`,
+        description: `Empower agriculture with precision AI. Monitor crops, optimize resource use, and detect anomalies with drone-based insights tailored for modern farming needs.`,
       },
     ]}
     image={{
-      src: '~/assets/images/llm.jpg',
-      alt: 'Generative AI for Business Insights',
+      src: '~/assets/images/agtech.jpg',
+      alt: 'AI in Agriculture and Precision Farming',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Large Language Models and Generative AI
-      </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">AgTech and Precision Farming</h3>
     </Fragment>
   </Content>
 
@@ -147,24 +143,22 @@ const metadata = {
   <Features2
     id="how-we-drive-impact"
     title="How We Drive Impact"
-    subtitle="Our approach combines actionable insights and scalable solutions to deliver real-world results."
+    subtitle="Empowering industries with data-driven intelligence."
     items={[
       {
-        title: 'Understanding Challenges',
-        description:
-          'We identify key transformation opportunities by analyzing your business’s unique needs and challenges.',
-        icon: 'tabler:search',
+        title: 'Data Integration',
+        description: 'We ingest and consolidate data from diverse sources for seamless analysis.',
+        icon: 'tabler:arrow-merge-both',
       },
       {
-        title: 'Building Scalable Solutions',
-        description: 'Our modular platforms provide flexible, impactful tools tailored to your operational goals.',
-        icon: 'tabler:settings',
+        title: 'Actionable Analytics',
+        description: 'Our platforms transform raw data into insights that drive efficiency and growth.',
+        icon: 'tabler:report-analytics',
       },
       {
-        title: 'Driving Long-Term Growth',
-        description:
-          'We deliver solutions that enable sustained innovation, operational excellence, and future readiness.',
-        icon: 'tabler:rocket',
+        title: 'Scalable Solutions',
+        description: 'From small pilots to full-scale deployments, our tools grow with your needs.',
+        icon: 'tabler:arrows-maximize',
       },
     ]}
   />
@@ -172,8 +166,8 @@ const metadata = {
   <!-- Call To Action -->
   <CallToAction
     id="cta"
-    title="Ready to Scale Your Business with AI?"
-    subtitle="Partner with Transcension AI to unlock the full potential of scalable and impactful solutions."
+    title="Ready to Leverage Data for Smarter Systems?"
+    subtitle="Partner with Transcension AI to unlock the potential of your operational data and drive transformative results."
     actions={[
       {
         variant: 'primary',
