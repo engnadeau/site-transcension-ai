@@ -12,7 +12,7 @@ metadata:
   title:
     default: Transcension AI
     template: '%s — Transcension AI'
-  description: "Transcension AI is a software company that specializes in AI and machine learning solutions for SMEs."
+  description: 'Transcension AI is a software company that specializes in AI and machine learning solutions for SMEs.'
   robots:
     index: true
     follow: true
