@@ -18,62 +18,76 @@ const metadata = {
     <script is:inline>
       /**
        * Dynamically loads the HubSpot form script into the page.
-       * If the script already exists, it removes it to avoid duplicate instances.
-       * @param {Function} callback - The function to call after the script loads successfully.
+       * Ensures proper initialization without duplicates.
+       * @param {Function} callback - Function to call after the script is loaded.
        */
       function loadHubSpotScript(callback) {
-        // Check if the HubSpot script already exists in the document
         const existingScript = document.querySelector('script[src="//js.hsforms.net/forms/embed/v2.js"]');
-        if (existingScript) {
-          existingScript.remove(); // Remove the existing script to allow a fresh reload
+
+        // If the script exists but hasn't fully loaded, attach the callback
+        if (existingScript && !existingScript.onload) {
+          existingScript.onload = callback;
+          return;
         }
 
-        // Create a new script element
+        // If the script exists and is ready, execute the callback
+        if (existingScript && existingScript.readyState === 'complete') {
+          callback();
+          return;
+        }
+
+        // Otherwise, create and append a new script
         const script = document.createElement('script');
-        script.src = '//js.hsforms.net/forms/embed/v2.js'; // HubSpot script source
+        script.src = '//js.hsforms.net/forms/embed/v2.js';
         script.type = 'text/javascript';
-        script.async = true; // Load asynchronously to avoid blocking the page
-
-        // Call the provided callback function once the script has loaded
+        script.async = true;
         script.onload = callback;
-
-        // Append the script to the document's body
         document.body.appendChild(script);
       }
 
       /**
-       * Initializes the HubSpot form inside the specified container.
-       * Checks if the HubSpot library is ready before creating the form.
+       * Initializes the HubSpot form in the target container.
+       * Handles retries until the HubSpot library is fully ready.
        */
       function initializeHubSpotForm() {
-        // Check if the HubSpot library is loaded and the form creation method is available
         if (window.hbspt && typeof hbspt.forms.create === 'function') {
           hbspt.forms.create({
-            portalId: '48173210', // Your HubSpot portal ID
-            formId: '6cc6def1-a379-4155-afd6-829bdaa9aa9d', // Your HubSpot form ID
-            target: '#hs-form-container', // The container where the form will be rendered
+            portalId: '48173210', // Replace with your portal ID
+            formId: '6cc6def1-a379-4155-afd6-829bdaa9aa9d', // Replace with your form ID
+            target: '#hs-form-container',
           });
         } else {
-          // If the library is not ready, log a warning and retry by reloading the script
-          console.warn('HubSpot form script not ready. Retrying...');
-          loadHubSpotScript(() => initializeHubSpotForm()); // Retry initialization after reloading the script
+          // Retry with exponential backoff
+          console.warn('HubSpot library not ready. Retrying...');
+          setTimeout(initializeHubSpotForm, 500);
         }
       }
 
       /**
-       * Event listener to handle SPA transitions in Astro.
-       * Ensures the HubSpot script is reloaded when the page content changes dynamically.
+       * Ensures the HubSpot form is initialized correctly on initial load
+       * and after Astro's SPA transitions.
        */
+      function setupHubSpotForm() {
+        loadHubSpotScript(initializeHubSpotForm);
+      }
+
+      // Event listener for Astro SPA transitions
       document.addEventListener('astro:after-swap', () => {
-        loadHubSpotScript(() => initializeHubSpotForm());
+        console.log('Astro SPA transition detected. Reinitializing HubSpot form...');
+        setupHubSpotForm();
       });
 
-      /**
-       * Event listener to initialize the HubSpot form on the initial page load.
-       */
+      // Event listener for the initial page load
       document.addEventListener('DOMContentLoaded', () => {
-        loadHubSpotScript(() => initializeHubSpotForm());
+        console.log('Initial page load. Initializing HubSpot form...');
+        setupHubSpotForm();
       });
+
+      // Fallback to ensure the form initializes even if both events are missed
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        console.log('Fallback initialization. Ensuring HubSpot form loads...');
+        setupHubSpotForm();
+      }
     </script>
   </div>
 </Layout>
