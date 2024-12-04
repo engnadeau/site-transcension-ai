@@ -1,0 +1,43 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Expert Consulting & Technical Due Diligence | Transcension AI',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    tagline="Expert Consulting & Technical Due Diligence"
+    title="Empowering Smarter Investments with Deep Technical Insights"
+    subtitle="Transcension AI partners with venture capitalists, startups, and investment banking teams to assess technical feasibility, mitigate risks, and drive informed decision-making."
+    actions={[
+      { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
+      { text: 'Learn More', href: '/' },
+    ]}
+    image={{
+      src: '~/assets/images/landing/consulting.jpg',
+      alt: 'Expert consulting and technical due diligence for Transcension AI',
+    }}
+  />
+
+  <!-- Call to Action Widget ******************* -->
+
+  <CallToAction
+    title="Unmatched Technical Expertise for High-Stakes Decisions"
+    subtitle="From evaluating AI systems and data platforms to assessing robotics and intelligent solutions, our technical due diligence services are designed to uncover hidden risks and opportunities. With decades of experience, we ensure your investments and projects are built on a solid foundation."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in Touch',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>
