@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AI Solutions for Industry 4.0 | Transcension AI',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="AI for Industry 4.0"
+    title="Revolutionize Manufacturing with AI-Powered Insights"
+    subtitle="Transcension AI helps manufacturers optimize production, reduce downtime, and drive efficiency with intelligent systems tailored for Industry 4.0."
+    actions={[
+      { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
+      { text: 'Learn More', href: '/' },
+    ]}
+    image={{
+      src: '~/assets/images/landing/industry40.jpg',
+      alt: 'AI Solutions for Industry 4.0 by Transcension AI',
+    }}
+  />
+
+  <CallToAction
+    title="AI-Powered Solutions for Smart Manufacturing"
+    subtitle="Unlock the power of AI for predictive maintenance, quality control, and supply chain optimization. Partner with Transcension AI to take your manufacturing operations to the next level."
+    actions={[{ variant: 'primary', text: 'Get in Touch', href: '/contact', icon: 'tabler:mail' }]}
+  />
+</Layout>

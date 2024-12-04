@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AI for Infrastructure Monitoring and Management | Transcension AI',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="AI for Infrastructure"
+    title="Smarter Infrastructure with AI-Driven Monitoring and Insights"
+    subtitle="Transcension AI delivers intelligent systems for monitoring infrastructure health, predicting maintenance needs, and optimizing construction processes."
+    actions={[
+      { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
+      { text: 'Learn More', href: '/' },
+    ]}
+    image={{
+      src: '~/assets/images/landing/infrastructure.jpg',
+      alt: 'AI for Infrastructure Monitoring by Transcension AI',
+    }}
+  />
+
+  <CallToAction
+    title="Revolutionize Infrastructure Management with AI"
+    subtitle="Utilize AI for real-time monitoring, environmental sensing, and predictive analytics to enhance infrastructure resilience and efficiency."
+    actions={[{ variant: 'primary', text: 'Get in Touch', href: '/contact', icon: 'tabler:mail' }]}
+  />
+</Layout>

@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Robotics and AI for Data-Driven Collaboration | Transcension AI',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Robotics and AI for Data Ingestion"
+    title="Harnessing Robotics for Data-Driven Human-AI Collaboration"
+    subtitle="Transcension AI integrates robotics and AI to collect, transform, and utilize data from mobile robots, drones, humanoid robots, and industrial robots in dynamic, real-world applications."
+    actions={[
+      { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
+      { text: 'Learn More', href: '/' },
+    ]}
+    image={{
+      src: '~/assets/images/landing/robotics.jpg',
+      alt: 'Robotics and AI for Data Ingestion by Transcension AI',
+    }}
+  />
+
+  <CallToAction
+    title="AI-Powered Insights from Robotic Systems"
+    subtitle="Whether deployed for industrial automation, field operations, or humanoid tasks, our solutions enable robots to ingest and transform sensor data into actionable intelligence. From vision capabilities to environmental sensing, we empower seamless collaboration between humans and AI-driven robotics."
+    actions={[{ variant: 'primary', text: 'Get in Touch', href: '/contact', icon: 'tabler:mail' }]}
+  />
+</Layout>

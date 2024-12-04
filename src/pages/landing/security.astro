@@ -1,0 +1,34 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AI for Security and Surveillance | Transcension AI',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="AI for Security and Surveillance"
+    title="Enhancing Security with Intelligent Surveillance Solutions"
+    subtitle="Transcension AI delivers cutting-edge AI systems for real-time monitoring, threat detection, and predictive analytics in security operations."
+    actions={[
+      { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
+      { text: 'Learn More', href: '/' },
+    ]}
+    image={{
+      src: '~/assets/images/landing/security.jpg',
+      alt: 'AI for Security and Surveillance by Transcension AI',
+    }}
+  />
+
+  <CallToAction
+    title="Secure Your Operations with AI"
+    subtitle="From anomaly detection to automated surveillance, our AI-powered solutions provide actionable intelligence to keep your operations safe and efficient."
+    actions={[
+      { variant: 'primary', text: 'Get in Touch', href: '/contact', icon: 'tabler:mail' },
+    ]}
+  />
+</Layout>

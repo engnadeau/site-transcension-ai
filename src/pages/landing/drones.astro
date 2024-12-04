@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Drones and AI Solutions | Transcension AI',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Drones and AI"
+    title="Transforming Industries with Drone-Powered Insights"
+    subtitle="Transcension AI harnesses the power of drones and AI to optimize operations, improve safety, and deliver actionable intelligence."
+    actions={[
+      { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
+      { text: 'Learn More', href: '/' },
+    ]}
+    image={{
+      src: '~/assets/images/landing/drones.jpg',
+      alt: 'Drones and AI Solutions by Transcension AI',
+    }}
+  />
+
+  <CallToAction
+    title="Smarter Solutions with Drone and AI Integration"
+    subtitle="From aerial monitoring to advanced data analytics, our AI-powered drones revolutionize how industries operate."
+    actions={[{ variant: 'primary', text: 'Get in Touch', href: '/contact', icon: 'tabler:mail' }]}
+  />
+</Layout>

@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AI and Drones for Agriculture and AgTech | Transcension AI',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="AI for Agriculture"
+    title="Transforming Agriculture with AI and Drone Technology"
+    subtitle="Transcension AI provides advanced AI solutions and drone capabilities to improve crop monitoring, optimize resource usage, and enhance yields in modern agriculture."
+    actions={[
+      { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
+      { text: 'Learn More', href: '/' },
+    ]}
+    image={{
+      src: '~/assets/images/landing/agtech.jpg',
+      alt: 'AI and Drones for Agriculture by Transcension AI',
+    }}
+  />
+
+  <CallToAction
+    title="Empowering AgTech with AI"
+    subtitle="From precision farming to drone-powered crop monitoring, our AI solutions provide actionable insights to help farmers maximize productivity and sustainability."
+    actions={[{ variant: 'primary', text: 'Get in Touch', href: '/contact', icon: 'tabler:mail' }]}
+  />
+</Layout>
