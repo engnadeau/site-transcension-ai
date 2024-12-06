@@ -4,22 +4,19 @@ site:
   base: '/'
   trailingSlash: false
 
-  # TODO: Update these values
-  # googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
-
 # Default SEO metadata
 metadata:
   title:
     default: Transcension AI
     template: '%s — Transcension AI'
-  description: 'Transcension AI is a software company that specializes in AI and machine learning solutions for SMEs.'
+  description: 'Transcension AI develops agent-based AI solutions, leveraging robotics, IoT, and multi-modal data to deliver actionable intelligence for operations, security, and Industry 4.0.'
   robots:
     index: true
     follow: true
   openGraph:
     site_name: Transcension AI
     images:
-      - url: '~/assets/images/opengraph.jpg'
+      - url: '~/assets/images/homepage/hero.jpg'
         width: 1200
         height: 628
     type: website
