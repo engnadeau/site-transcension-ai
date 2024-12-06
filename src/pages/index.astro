@@ -10,7 +10,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Transcension AI - Data-Driven AI Insights for Intelligent Systems',
+  title: 'Transcension AI - Agent-Based Intelligence for Complex Systems',
 };
 ---
 
@@ -21,7 +21,7 @@ const metadata = {
       {...headerData}
       actions={[
         { variant: 'secondary', text: 'Contact Us', href: '/contact' },
-        { variant: 'primary', text: 'Get Started', href: '#platform' },
+        { variant: 'primary', text: 'Get Started', href: '#solutions' },
       ]}
       isSticky
     />
@@ -30,88 +30,110 @@ const metadata = {
   <!-- Hero Section -->
   <Hero2
     id="hero"
-    tagline="Unlock the Power of Operational Data"
+    tagline="Transforming Operations with Agent-Based AI"
     actions={[
-      { variant: 'primary', text: 'Discover Our Solutions', href: '#platform' },
-      { text: 'Learn More', href: '#how-we-drive-impact' },
+      { variant: 'primary', text: 'Discover the Platform', href: '#solutions' },
+      { text: 'Learn More', href: '#why-transcension' },
     ]}
     image={{
-      src: '~/assets/images/hero.jpg',
-      alt: 'Transcension AI - Data-Driven Insights',
+      src: '~/assets/images/homepage/hero.jpg',
+      alt: 'Transcension AI - Agent-Based Intelligence',
     }}
   >
     <Fragment slot="title">
-      Transforming <span class="text-accent">Intelligent Systems</span> with Data
+      Agent-Based Intelligence for the <span class="text-accent">Physical and Digital Worlds</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Transcension AI enables industries to harness the vast potential of operational data through AI-driven insights,
-      empowering organizations to make smarter decisions and achieve unparalleled efficiency.
+      Transcension AI combines multi-modal data fusion with human-AI collaboration to create adaptive intelligence for
+      operations, security, and decision-making. From robotics and IoT to sensor-driven systems, our agents transform
+      fragmented data into actionable insights.
     </Fragment>
   </Hero2>
 
-  <!-- Features Section -->
+  <!-- Solutions Section -->
   <Features
-    id="platform"
-    title="Our AI-Driven Solutions"
-    subtitle="Innovating at the intersection of data, intelligence, and action."
+    id="solutions"
+    title="Our Platform"
+    subtitle="A modular, adaptive AI platform built for intelligent systems."
     columns={2}
     items={[
       {
-        title: 'Data Transformation',
-        description: 'Ingest, transform, and make sense of sensor and operational data at scale.',
-        icon: 'tabler:database',
+        title: 'Agent-Based Architecture',
+        description:
+          'Deploy specialized AI agents that collaborate to optimize workflows, monitor environments, and drive decisions.',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Computer Vision Models',
-        description: 'Deploy powerful vision systems for real-time detection, tracking, and analysis.',
-        icon: 'tabler:camera',
+        title: 'Multi-Modal Data Fusion',
+        description: 'Integrate and analyze data from sensors, robotics, IoT devices, drones, and traditional systems.',
+        icon: 'tabler:arrows-split',
       },
       {
-        title: 'Operational Insights',
-        description: 'Convert raw data into actionable intelligence for smarter decision-making.',
-        icon: 'tabler:chart-line',
+        title: 'Human-AI Collaboration',
+        description:
+          'Empower teams with decision-ready insights while enabling AI agents to autonomously handle routine operations.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Edge-Optimized AI',
-        description: 'Embedded solutions tailored for robotics, drones, and industrial systems.',
-        icon: 'tabler:cpu',
+        title: 'Scalable Intelligence',
+        description: 'Start with targeted use cases and scale seamlessly across complex environments and domains.',
+        icon: 'tabler:layers-linked',
       },
     ]}
   />
 
-  <!-- Use Cases -->
+  <!-- Problem Space -->
   <Content
-    id="use-case-robotics"
-    title="Use Cases"
-    subtitle="Unlock the full potential of robotics, drones, and intelligent systems."
+    id="why-transcension"
+    title="Why Agent-Based Intelligence?"
+    subtitle="A new approach to operational intelligence."
     isReversed
     items={[
       {
-        description: `Revolutionize Industry 4.0 with AI-powered robotics and drones. Enable predictive maintenance, automate inspections, and enhance safety with real-time operational insights.`,
+        description: `Organizations face overwhelming data complexity across robotics, IoT devices, drones, and traditional systems. Transcension AI’s agent-based platform simplifies this chaos by creating autonomous agents that analyze, communicate, and act—delivering real-time insights and streamlining operations.`,
       },
     ]}
     image={{
-      src: '~/assets/images/robotics.jpg',
-      alt: 'Robotics and AI in Industry 4.0',
+      src: '~/assets/images/homepage/data.jpg',
+      alt: 'AI Problem Space',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Robotics, Drones, and Industry 4.0
+        Intelligence Across All Data Modalities
       </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Use Cases -->
+  <Content
+    id="use-case-intelligent-systems"
+    items={[
+      {
+        description: `Enable intelligent systems that seamlessly combine robotics, IoT devices, drones, and sensors. Optimize workflows, monitor operations, and predict disruptions using coordinated AI agents designed to adapt to your environment.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/homepage/robotics.jpg',
+      alt: 'AI for Intelligent Systems',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Intelligent Systems</h3>
     </Fragment>
   </Content>
 
   <Content
     id="use-case-security"
+    isReversed
     isAfterContent={true}
     items={[
       {
-        description: `Enhance security and defense with AI-driven surveillance and threat detection. From border monitoring to critical infrastructure protection, our solutions deliver unmatched precision and scalability.`,
+        description: `Enhance security and defense through AI-driven situational awareness. Monitor perimeters, detect anomalies, and automate threat responses with precision and scalability.`,
       },
     ]}
     image={{
-      src: '~/assets/images/security.jpg',
+      src: '~/assets/images/homepage/security.jpg',
       alt: 'AI for Security and Defense',
     }}
   >
@@ -121,44 +143,43 @@ const metadata = {
   </Content>
 
   <Content
-    id="use-case-agtech"
-    isReversed
-    isAfterContent={true}
+    id="use-case-logistics"
     items={[
       {
-        description: `Empower agriculture with precision AI. Monitor crops, optimize resource use, and detect anomalies with drone-based insights tailored for modern farming needs.`,
+        description: `Streamline supply chains with predictive logistics management. Optimize routes, track assets, and mitigate disruptions using AI agents that adapt to changing conditions.`,
       },
     ]}
     image={{
-      src: '~/assets/images/agtech.jpg',
-      alt: 'AI in Agriculture and Precision Farming',
+      src: '~/assets/images/homepage/logistics.jpg',
+      alt: 'AI for Logistics Optimization',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">AgTech and Precision Farming</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Logistics & Supply Chain</h3>
     </Fragment>
   </Content>
 
-  <!-- Steps Section -->
+  <!-- Impact Section -->
   <Features2
     id="how-we-drive-impact"
-    title="How We Drive Impact"
-    subtitle="Empowering industries with data-driven intelligence."
+    title="How We Deliver Impact"
+    subtitle="AI agents for scalable intelligence."
     items={[
       {
-        title: 'Data Integration',
-        description: 'We ingest and consolidate data from diverse sources for seamless analysis.',
-        icon: 'tabler:arrow-merge-both',
+        title: 'Real-Time Collaboration',
+        description:
+          'AI agents continuously monitor, analyze, and act, ensuring seamless operations across environments.',
+        icon: 'tabler:clock',
       },
       {
-        title: 'Actionable Analytics',
-        description: 'Our platforms transform raw data into insights that drive efficiency and growth.',
-        icon: 'tabler:report-analytics',
+        title: 'Data Fusion and Integration',
+        description: 'Fuse data from multiple modalities—vision, sensors, and IoT—for a unified operational view.',
+        icon: 'tabler:database',
       },
       {
-        title: 'Scalable Solutions',
-        description: 'From small pilots to full-scale deployments, our tools grow with your needs.',
-        icon: 'tabler:arrows-maximize',
+        title: 'Actionable Insights at Scale',
+        description: 'Transform raw data into predictive insights, enabling fast decisions and automated responses.',
+        icon: 'tabler:bulb',
       },
     ]}
   />
@@ -166,12 +187,12 @@ const metadata = {
   <!-- Call To Action -->
   <CallToAction
     id="cta"
-    title="Ready to Leverage Data for Smarter Systems?"
-    subtitle="Partner with Transcension AI to unlock the potential of your operational data and drive transformative results."
+    title="Ready to Build Intelligent Systems?"
+    subtitle="Discover how Transcension AI can optimize your operations with agent-based intelligence."
     actions={[
       {
         variant: 'primary',
-        text: 'Get Started',
+        text: 'Contact Us',
         href: '/contact',
       },
     ]}
