@@ -4,9 +4,9 @@ export const headerData = {
   links: [
     { text: 'Home', href: getPermalink('/') },
     { text: 'About', href: getPermalink('/about') },
-    { text: 'Solutions', href: '/#platform' },
-    { text: 'Industries', href: '/#use-case-robotics' },
-    { text: 'Insights', href: '/#how-we-drive-impact' },
+    { text: 'Solutions', href: '/#solutions' },
+    { text: 'Industries', href: '/#use-case-intelligent-systems' },
+    { text: 'Impact', href: '/#how-we-drive-impact' },
     { text: 'Contact', href: getPermalink('/contact') },
   ],
 };
@@ -16,18 +16,18 @@ export const footerData = {
     {
       title: 'Solutions',
       links: [
-        { text: 'Overview', href: '/#platform' },
-        { text: 'Data Transformation', href: '/#platform' },
-        { text: 'Computer Vision Models', href: '/#platform' },
-        { text: 'Edge-Optimized AI', href: '/#platform' },
+        { text: 'Overview', href: '/#solutions' },
+        { text: 'Agent-Based Intelligence', href: '/#solutions' },
+        { text: 'Multi-Modal Data Fusion', href: '/#solutions' },
+        { text: 'Human-AI Collaboration', href: '/#solutions' },
       ],
     },
     {
       title: 'Industries',
       links: [
-        { text: 'Robotics and Industry 4.0', href: '/#use-case-robotics' },
+        { text: 'Intelligent Systems', href: '/#use-case-intelligent-systems' },
         { text: 'Security and Defense', href: '/#use-case-security' },
-        { text: 'AgTech and Precision Farming', href: '/#use-case-agtech' },
+        { text: 'Logistics and Supply Chain', href: '/#use-case-logistics' },
       ],
     },
     {
