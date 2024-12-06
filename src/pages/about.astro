@@ -1,4 +1,5 @@
 ---
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features from '~/components/widgets/Features.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -13,20 +14,20 @@ const metadata = {
   <Hero
     tagline="About Transcension AI"
     image={{
-      src: '~/assets/images/robotics.jpg',
-      alt: 'AI and Robotics Innovation',
+      src: '~/assets/images/intelligent-systems.jpg',
+      alt: 'AI for Intelligent Systems',
     }}
   >
     <Fragment slot="title">
-      Transforming Industries with <br />
-      <span class="text-accent dark:text-white highlight">Data-Driven AI Solutions</span>
+      Pioneering <span class="text-accent">Agent-Based Intelligence</span> for the Real World
     </Fragment>
 
     <Fragment slot="subtitle">
-      Transcension AI, founded by Dr. Nicholas Nadeau, pioneers the development of AI-driven tools, platforms, and
-      solutions that extract actionable insights from operational data. We empower industries to harness the exponential
-      growth of data collected by drones, robotics, and intelligent systems to drive efficiency, scalability, and
-      impact.
+      Transcension AI, founded by Dr. Nicholas Nadeau, is redefining operational intelligence through agent-based AI
+      solutions. By seamlessly integrating data from robotics, drones, IoT, and sensors, we deliver actionable
+      intelligence that empowers industries to optimize operations, enhance security, and drive innovation. Our platform
+      combines multi-modal data fusion with human-AI collaboration to create intelligent systems that thrive in the
+      physical and digital worlds.
     </Fragment>
   </Hero>
 
@@ -34,24 +35,25 @@ const metadata = {
   <Features
     id="values"
     title="Our Core Values"
-    subtitle="What drives us every day"
+    subtitle="Guiding principles that shape our work"
     columns={3}
     items={[
       {
-        title: 'Data-Driven Excellence',
+        title: 'Intelligent Innovation',
         description:
-          'We strive to deliver exceptional value by transforming raw data into meaningful, actionable insights.',
-        icon: 'tabler:database',
+          'We harness the power of AI to create transformative solutions that solve complex real-world challenges.',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Innovation',
+        title: 'Collaboration',
         description:
-          'We embrace cutting-edge AI and embedded technologies to solve challenges traditional systems cannot.',
-        icon: 'tabler:bulb',
+          'We believe in the synergy between humans and AI, enabling systems that augment human decision-making.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Scalability',
-        description: 'Our modular platforms are designed to evolve with your needs, ensuring long-term success.',
+        title: 'Scalable Impact',
+        description:
+          'Our modular, adaptive platforms are designed to grow with our customers’ needs, ensuring long-term success.',
         icon: 'tabler:trending-up',
       },
     ]}
@@ -61,20 +63,34 @@ const metadata = {
   <Features
     id="vision-mission"
     title="Vision & Mission"
-    subtitle="Our purpose and goals"
+    subtitle="Our purpose and aspirations"
     columns={2}
     items={[
       {
         title: 'Vision',
         description:
-          'To lead the future of AI-driven solutions by transforming operational data into actionable intelligence, building smarter, data-enabled systems for industries worldwide.',
+          'To lead the transformation of industries by enabling intelligent systems that merge AI, robotics, and IoT to solve the world’s most complex operational challenges.',
         icon: 'tabler:eye',
       },
       {
         title: 'Mission',
         description:
-          'To empower organizations with scalable AI tools and platforms that revolutionize decision-making, automate inefficiencies, and drive real-world impact.',
+          'To empower organizations with agent-based intelligence that integrates seamlessly with physical and digital systems, unlocking the full potential of operational data to enhance efficiency, resilience, and innovation.',
         icon: 'tabler:target',
+      },
+    ]}
+  />
+
+  <!-- Call To Action -->
+  <CallToAction
+    id="cta"
+    title="Ready to Build Intelligent Systems?"
+    subtitle="Discover how Transcension AI can optimize your operations with agent-based intelligence."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
       },
     ]}
   />
