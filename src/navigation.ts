@@ -35,10 +35,12 @@ export const footerData = {
       links: [
         { text: 'About', href: getPermalink('/about') },
         { text: 'Contact', href: getPermalink('/contact') },
-        { text: 'Privacy Policy', href: '/privacy' },
-        { text: 'Terms of Service', href: '/terms' },
       ],
     },
+  ],
+  secondaryLinks: [
+    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Terms of Service', href: getPermalink('/terms') },
   ],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/company/transcension-ai' },
