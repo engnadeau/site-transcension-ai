@@ -5,18 +5,19 @@ import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Robotics and AI for Data-Driven Collaboration | Transcension AI',
+  title: 'Agent-Based Robotics and AI for Human-AI Collaboration | Transcension AI',
 };
 ---
 
 <Layout metadata={metadata}>
+  <!-- Hero Section -->
   <Hero
-    tagline="Robotics and AI for Data Ingestion"
-    title="Harnessing Robotics for Data-Driven Human-AI Collaboration"
-    subtitle="Transcension AI integrates robotics and AI to collect, transform, and utilize data from mobile robots, drones, humanoid robots, and industrial robots in dynamic, real-world applications."
+    tagline="AI and Robotics for Real-World Intelligence"
+    title="Revolutionizing Data-Driven Collaboration with Robotics and AI"
+    subtitle="Transcension AI integrates robotics, drones, and AI agents to collect, analyze, and act on multi-modal data. Our solutions power intelligent systems for industrial automation, field operations, and human-AI collaboration."
     actions={[
       { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
-      { text: 'Learn More', href: '/' },
+      { text: 'Learn More', href: '/about' },
     ]}
     image={{
       src: '~/assets/images/landing/robotics.jpg',
@@ -24,9 +25,17 @@ const metadata = {
     }}
   />
 
+  <!-- Call to Action Section -->
   <CallToAction
-    title="AI-Powered Insights from Robotic Systems"
-    subtitle="Whether deployed for industrial automation, field operations, or humanoid tasks, our solutions enable robots to ingest and transform sensor data into actionable intelligence. From vision capabilities to environmental sensing, we empower seamless collaboration between humans and AI-driven robotics."
-    actions={[{ variant: 'primary', text: 'Get in Touch', href: '/contact', icon: 'tabler:mail' }]}
+    title="Empowering Robotics with AI Intelligence"
+    subtitle="From autonomous navigation to real-time decision-making, Transcension AI leverages robotics, IoT, and sensor fusion to deliver actionable intelligence. Enable seamless human-AI collaboration and achieve new levels of operational efficiency with our agent-based platform."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in Touch',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
   />
 </Layout>

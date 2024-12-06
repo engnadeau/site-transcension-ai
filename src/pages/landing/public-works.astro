@@ -5,28 +5,37 @@ import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AI for Public Works and Infrastructure Management | Transcension AI',
+  title: 'AI for Public Works & Infrastructure Management | Transcension AI',
 };
 ---
 
 <Layout metadata={metadata}>
+  <!-- Hero Section -->
   <Hero
-    tagline="AI for Public Works"
-    title="Optimizing Public Works with AI-Driven Insights"
-    subtitle="Transcension AI empowers public works operations with intelligent systems to monitor infrastructure, manage resources, and improve service delivery efficiently and effectively."
+    tagline="AI for Smarter Public Works"
+    title="Modernizing Public Works with Agent-Based Intelligence"
+    subtitle="Transcension AI delivers advanced solutions for monitoring public infrastructure, optimizing resource allocation, and improving service efficiency. Our platform integrates AI agents, IoT, and real-time data to address the unique challenges of public works."
     actions={[
       { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
-      { text: 'Learn More', href: '/' },
+      { text: 'Learn More', href: '/about' },
     ]}
     image={{
       src: '~/assets/images/landing/public-works.jpg',
-      alt: 'AI for Public Works by Transcension AI',
+      alt: 'AI Solutions for Public Works by Transcension AI',
     }}
   />
 
+  <!-- Call to Action Section -->
   <CallToAction
-    title="Transform Public Works with AI"
-    subtitle="From asset monitoring to predictive maintenance and resource optimization, Transcension AI provides the tools needed to modernize public works operations and improve decision-making."
-    actions={[{ variant: 'primary', text: 'Get in Touch', href: '/contact', icon: 'tabler:mail' }]}
+    title="Revolutionize Public Works with AI"
+    subtitle="Leverage Transcension AI's agent-based intelligence platform to streamline public works operations, enhance infrastructure monitoring, and deliver better services with predictive insights and optimized resource management."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in Touch',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
   />
 </Layout>

@@ -5,28 +5,37 @@ import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Drones and AI Solutions | Transcension AI',
+  title: 'Drones and AI-Driven Intelligence | Transcension AI',
 };
 ---
 
 <Layout metadata={metadata}>
+  <!-- Hero Section -->
   <Hero
-    tagline="Drones and AI"
-    title="Transforming Industries with Drone-Powered Insights"
-    subtitle="Transcension AI harnesses the power of drones and AI to optimize operations, improve safety, and deliver actionable intelligence."
+    tagline="AI-Driven Intelligence with Drones"
+    title="Unleashing the Power of Drones and AI for Real-World Impact"
+    subtitle="Transcension AI integrates drones, sensors, and multi-modal AI to deliver actionable intelligence for operations, security, and decision-making across industries."
     actions={[
       { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
-      { text: 'Learn More', href: '/' },
+      { text: 'Learn More', href: '/about' },
     ]}
     image={{
       src: '~/assets/images/landing/drones.jpg',
-      alt: 'Drones and AI Solutions by Transcension AI',
+      alt: 'Drones and AI-Driven Insights by Transcension AI',
     }}
   />
 
+  <!-- Call to Action Section -->
   <CallToAction
-    title="Smarter Solutions with Drone and AI Integration"
-    subtitle="From aerial monitoring to advanced data analytics, our AI-powered drones revolutionize how industries operate."
-    actions={[{ variant: 'primary', text: 'Get in Touch', href: '/contact', icon: 'tabler:mail' }]}
+    title="Transforming Operations with Drone-Powered Intelligence"
+    subtitle="From aerial monitoring to multi-modal data fusion, Transcension AI leverages drones and advanced AI to streamline workflows, improve safety, and optimize decision-making."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in Touch',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
   />
 </Layout>

@@ -5,28 +5,33 @@ import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AI and Drones for Agriculture and AgTech | Transcension AI',
+  title: 'Agent-Based AI for Intelligent Systems | Transcension AI',
 };
 ---
 
 <Layout metadata={metadata}>
+  <!-- Hero Section -->
   <Hero
-    tagline="AI for Agriculture"
-    title="Transforming Agriculture with AI and Drone Technology"
-    subtitle="Transcension AI provides advanced AI solutions and drone capabilities to improve crop monitoring, optimize resource usage, and enhance yields in modern agriculture."
+    tagline="AI for the Real World"
+    title="Transforming Industries with Agent-Based Intelligence"
+    subtitle="Transcension AI combines multi-modal data fusion, robotics, drones, and IoT to deliver actionable intelligence across agriculture, logistics, security, and more."
     actions={[
-      { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
-      { text: 'Learn More', href: '/' },
+      { variant: 'primary', text: 'Explore Solutions', href: '/#solutions', icon: 'tabler:search' },
+      { text: 'Learn More', href: '/about' },
     ]}
     image={{
-      src: '~/assets/images/landing/agtech.jpg',
-      alt: 'AI and Drones for Agriculture by Transcension AI',
+      src: '~/assets/images/landing/intelligent-systems.jpg',
+      alt: 'Agent-Based Intelligence for Real-World Applications by Transcension AI',
     }}
   />
 
+  <!-- Call to Action Section -->
   <CallToAction
-    title="Empowering AgTech with AI"
-    subtitle="From precision farming to drone-powered crop monitoring, our AI solutions provide actionable insights to help farmers maximize productivity and sustainability."
-    actions={[{ variant: 'primary', text: 'Get in Touch', href: '/contact', icon: 'tabler:mail' }]}
+    title="Empowering Industries with AI"
+    subtitle="From precision farming and drone-powered monitoring to logistics optimization and security intelligence, our AI platform adapts to diverse operational challenges."
+    actions={[
+      { variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:calendar' },
+      { text: 'Learn More', href: '/#industries' },
+    ]}
   />
 </Layout>
