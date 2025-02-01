@@ -7,6 +7,7 @@ import Content from '~/components/widgets/Content.astro';
 import { headerData } from '~/navigation';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Brands2 from '~/components/widgets/Brands2.astro';
 
 const metadata = {
   title: 'Transcension AI - Strategic AI & Emerging Tech Consulting',
@@ -79,6 +80,18 @@ const metadata = {
         description: 'Engaging keynotes, panels, and executive training on AI, robotics, and the future of technology.',
         icon: 'tabler:microphone',
       },
+    ]}
+  />
+
+  <!-- Portfolio -->
+  <Brands2
+    title="Strategic Partners, Clients, and Engagements"
+    id="portfolio"
+    subtitle="Driving impact through deep-tech strategy, investment guidance, and corporate innovation."
+    images={[
+      { src: '~/assets/images/logos/emovi.png', alt: 'EMOVI' },
+      { src: '~/assets/images/logos/osedea.png', alt: 'Osedea' },
+      { src: '~/assets/images/logos/vope.png', alt: 'Vope Medical' },
     ]}
   />
 
