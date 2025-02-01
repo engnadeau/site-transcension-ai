@@ -16,7 +16,7 @@ metadata:
   openGraph:
     site_name: Transcension AI
     images:
-      - url: '~/assets/images/homepage/hero.jpg'
+      - url: '~/assets/images/hero.jpg'
         width: 1200
         height: 628
     type: website
