@@ -4,13 +4,12 @@ import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
-
 import { headerData } from '~/navigation';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Transcension AI - Agent-Based Intelligence for Complex Systems',
+  title: 'Transcension AI - Strategic AI & Emerging Tech Consulting',
 };
 ---
 
@@ -21,7 +20,7 @@ const metadata = {
       {...headerData}
       actions={[
         { variant: 'secondary', text: 'Contact Us', href: '/contact' },
-        { variant: 'primary', text: 'Get Started', href: '#solutions' },
+        { variant: 'primary', text: 'Get Started', href: '#services' },
       ]}
       isSticky
     />
@@ -30,156 +29,102 @@ const metadata = {
   <!-- Hero Section -->
   <Hero2
     id="hero"
-    tagline="Transforming Operations with Agent-Based AI"
+    tagline="Strategic AI & Emerging Tech Consulting"
     actions={[
-      { variant: 'primary', text: 'Discover the Platform', href: '#solutions' },
+      { variant: 'primary', text: 'Explore Expertise', href: '#services' },
       { text: 'Learn More', href: '#why-transcension' },
     ]}
     image={{
       src: '~/assets/images/homepage/hero.jpg',
-      alt: 'Transcension AI - Agent-Based Intelligence',
+      alt: 'Transcension AI - AI Strategy and Consulting',
     }}
   >
     <Fragment slot="title">
-      Agent-Based Intelligence for the <span class="text-accent">Physical and Digital Worlds</span>
+      High-Impact AI & Emerging Tech Advisory for <span class="text-accent">Investors, Enterprises, and Innovators</span
+      >
     </Fragment>
     <Fragment slot="subtitle">
-      Transcension AI combines multi-modal data fusion with human-AI collaboration to create adaptive intelligence for
-      operations, security, and decision-making. From robotics and IoT to sensor-driven systems, our agents transform
-      fragmented data into actionable insights.
+      Transcension AI provides elite consulting for AI, robotics, IoT, data, and emerging technologies. We partner with
+      VCs, investment banks, and corporate innovation teams to deliver deep industry insights, technology due diligence,
+      and strategic advisory services.
     </Fragment>
   </Hero2>
 
-  <!-- Solutions Section -->
+  <!-- Services Section -->
   <Features
-    id="solutions"
-    title="Our Platform"
-    subtitle="A modular, adaptive AI platform built for intelligent systems."
+    id="services"
+    title="Expert Consulting Services"
+    subtitle="Helping businesses navigate AI, deep tech, and disruptive innovation."
     columns={2}
     items={[
       {
-        title: 'Agent-Based Architecture',
+        title: 'AI & Emerging Tech Strategy',
         description:
-          'Deploy specialized AI agents that collaborate to optimize workflows, monitor environments, and drive decisions.',
-        icon: 'tabler:brain',
+          'Developing tailored technology strategies that align with business objectives and industry trends.',
+        icon: 'tabler:bulb',
       },
       {
-        title: 'Multi-Modal Data Fusion',
-        description: 'Integrate and analyze data from sensors, robotics, IoT devices, drones, and traditional systems.',
-        icon: 'tabler:arrows-split',
+        title: 'Due Diligence & Market Analysis',
+        description: 'Supporting VCs, investment firms, and enterprises with expert assessments of AI investments.',
+        icon: 'tabler:chart-bar',
       },
       {
-        title: 'Human-AI Collaboration',
+        title: 'Corporate Innovation & R&D',
         description:
-          'Empower teams with decision-ready insights while enabling AI agents to autonomously handle routine operations.',
-        icon: 'tabler:users',
+          'Guiding corporate innovation teams to adopt and integrate cutting-edge AI and emerging technologies.',
+        icon: 'tabler:building',
       },
       {
-        title: 'Scalable Intelligence',
-        description: 'Start with targeted use cases and scale seamlessly across complex environments and domains.',
-        icon: 'tabler:layers-linked',
+        title: 'Speaking & Thought Leadership',
+        description: 'Engaging keynotes, panels, and executive training on AI, robotics, and the future of technology.',
+        icon: 'tabler:microphone',
       },
     ]}
   />
 
-  <!-- Problem Space -->
+  <!-- Why Transcension AI -->
   <Content
     id="why-transcension"
-    title="Why Agent-Based Intelligence?"
-    subtitle="A new approach to operational intelligence."
+    title="Why Work with Transcension AI?"
+    subtitle="Deep expertise. Strategic insights. Proven impact."
     isReversed
     items={[
       {
-        description: `Organizations face overwhelming data complexity across robotics, IoT devices, drones, and traditional systems. Transcension AI’s agent-based platform simplifies this chaos by creating autonomous agents that analyze, communicate, and act—delivering real-time insights and streamlining operations.`,
+        description: `With a track record of advising top-tier investors, enterprises, and tech leaders, Transcension AI delivers unmatched expertise in AI strategy, due diligence, and innovation consulting. Our insights drive high-impact decisions and transformational outcomes.`,
       },
     ]}
     image={{
-      src: '~/assets/images/homepage/data.jpg',
-      alt: 'AI Problem Space',
+      src: '~/assets/images/homepage/speaking.jpg',
+      alt: 'AI Strategy and Consulting',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Intelligence Across All Data Modalities
+        Elite Advisory for High-Stakes AI & Tech Decisions
       </h3>
-    </Fragment>
-  </Content>
-
-  <!-- Use Cases -->
-  <Content
-    id="use-case-intelligent-systems"
-    items={[
-      {
-        description: `Enable intelligent systems that seamlessly combine robotics, IoT devices, drones, and sensors. Optimize workflows, monitor operations, and predict disruptions using coordinated AI agents designed to adapt to your environment.`,
-      },
-    ]}
-    image={{
-      src: '~/assets/images/homepage/robotics.jpg',
-      alt: 'AI for Intelligent Systems',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Intelligent Systems</h3>
-    </Fragment>
-  </Content>
-
-  <Content
-    id="use-case-security"
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        description: `Enhance security and defense through AI-driven situational awareness. Monitor perimeters, detect anomalies, and automate threat responses with precision and scalability.`,
-      },
-    ]}
-    image={{
-      src: '~/assets/images/homepage/security.jpg',
-      alt: 'AI for Security and Defense',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Security and Defense</h3>
-    </Fragment>
-  </Content>
-
-  <Content
-    id="use-case-logistics"
-    items={[
-      {
-        description: `Streamline supply chains with predictive logistics management. Optimize routes, track assets, and mitigate disruptions using AI agents that adapt to changing conditions.`,
-      },
-    ]}
-    image={{
-      src: '~/assets/images/homepage/logistics.jpg',
-      alt: 'AI for Logistics Optimization',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Logistics & Supply Chain</h3>
     </Fragment>
   </Content>
 
   <!-- Impact Section -->
   <Features2
     id="how-we-drive-impact"
-    title="How We Deliver Impact"
-    subtitle="AI agents for scalable intelligence."
+    title="Delivering Impact at the Highest Level"
+    subtitle="Transcension AI provides insight-driven advisory for complex challenges."
     items={[
       {
-        title: 'Real-Time Collaboration',
-        description:
-          'AI agents continuously monitor, analyze, and act, ensuring seamless operations across environments.',
-        icon: 'tabler:clock',
+        title: 'Strategic Roadmaps',
+        description: 'Helping organizations define their AI and deep tech strategy for sustainable success.',
+        icon: 'tabler:map',
       },
       {
-        title: 'Data Fusion and Integration',
-        description: 'Fuse data from multiple modalities—vision, sensors, and IoT—for a unified operational view.',
-        icon: 'tabler:database',
+        title: 'Investor-Grade Due Diligence',
+        description: 'Identifying risks and opportunities in AI and emerging tech investments.',
+        icon: 'tabler:search',
       },
       {
-        title: 'Actionable Insights at Scale',
-        description: 'Transform raw data into predictive insights, enabling fast decisions and automated responses.',
-        icon: 'tabler:bulb',
+        title: 'High-Value Corporate Innovation',
+        description: 'Advising Fortune 500s and growth-stage companies on leveraging AI for competitive advantage.',
+        icon: 'tabler:briefcase',
       },
     ]}
   />
@@ -187,14 +132,8 @@ const metadata = {
   <!-- Call To Action -->
   <CallToAction
     id="cta"
-    title="Ready to Build Intelligent Systems?"
-    subtitle="Discover how Transcension AI can optimize your operations with agent-based intelligence."
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Contact Us',
-        href: '/contact',
-      },
-    ]}
+    title="Ready to Elevate Your AI & Tech Strategy?"
+    subtitle="Connect with Transcension AI for elite advisory and insights."
+    actions={[{ variant: 'primary', text: 'Contact Us', href: '/contact' }]}
   />
 </Layout>
