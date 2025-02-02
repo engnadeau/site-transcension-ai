@@ -9,14 +9,14 @@ metadata:
   title:
     default: Transcension AI
     template: '%s — Transcension AI'
-  description: 'Transcension AI develops agent-based AI solutions, leveraging robotics, IoT, and multi-modal data to deliver actionable intelligence for operations, security, and Industry 4.0.'
+  description: 'Transcension AI: Elite AI & emerging tech consulting—strategic advisory, due diligence, and innovation insights for investors, enterprises, and corporate leaders.'
   robots:
     index: true
     follow: true
   openGraph:
     site_name: Transcension AI
     images:
-      - url: '~/assets/images/homepage/hero.jpg'
+      - url: '~/assets/images/hero.jpg'
         width: 1200
         height: 628
     type: website
